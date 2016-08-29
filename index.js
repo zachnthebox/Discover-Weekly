@@ -2,6 +2,7 @@
 var SpotifyWebApi = require('spotify-web-api-node');
 var firebase = require('firebase');
 var RSVP = require('rsvp');
+var moment = require('moment-timezone');
 
 var spotifyClientId = process.env.spotifyClientId;
 var spotifyClientSecret = process.env.spotifyClientSecret;
@@ -15,10 +16,16 @@ var firebaseAuthDomain = process.env.firebaseAuthDomain;
 var firebaseStorageBucket = process.env.firebaseStorageBucket;
 var firebaseDatabaseURL = process.env.firebaseDatabaseURL;
 
+moment.tz.setDefault('America/New_York');
+
+var MONDAY = 1;
 var spotifyApi;
-setupSpotifyApi().then(setupFirebaseApi).then(getDiscoveryPlaylist).then(function(response) {
-  return response.body;
-}).then(addPlaylistToFirebase).then(exit);
+
+if (moment().weekday() === MONDAY) {
+  setupSpotifyApi().then(setupFirebaseApi).then(getDiscoveryPlaylist).then(function(response) {
+    return response.body;
+  }).then(addPlaylistToFirebase).then(exit);
+}
 
 function exit() {
   process.exit();

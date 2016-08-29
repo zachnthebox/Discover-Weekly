@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "firebase": "^3.3.0",
+    "moment-timezone": "^0.5.5",
     "rsvp": "^3.2.1",
     "spotify-web-api-node": "^2.3.5"
   }
