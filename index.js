@@ -56,7 +56,8 @@ function addPlaylistToFirebase(playlist) {
       name: playlist.name,
       tracks: trackIds,
       snapshotDate: snapshotDate,
-      snapshotId: playlist.snapshot_id
+      snapshotId: playlist.snapshot_id,
+      images: playlist.images
     });
   });
 }
