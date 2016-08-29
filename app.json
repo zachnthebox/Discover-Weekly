@@ -1,0 +1,38 @@
+{
+  "name": "Disover Weekly Backup",
+  "desecription": "Backup Discover Weekly Playlists",
+  "repository": "https://github.com/zachnthebox/discover-weekly",
+  "env": {
+    "spotifyClientId": {
+      "description": "Spotify Client ID"
+    },
+    "spotifyClientSecret": {
+      "description": "Spotify Client Secret"
+    },
+    "spotifyAccessToken": {
+      "description": "Spotify Access Token"
+    },
+    "spotifyRefreshToken": {
+      "description": "Spotify Refresh Token"
+    },
+    "firebaseUsername": {
+      "description": "Firebase Username"
+    },
+    "firebasePassword": {
+      "description": "Firebase password"
+    },
+    "firebaseApiKey": {
+      "description": "Firebase API Key"
+    },
+    "firebaseAuthDomain": {
+      "description": "Firebase Auth Domain"
+    },
+    "firebaseStorageBucket": {
+      "description": "Firebase Storage Bucket"
+    },
+    "firebaseDatabaseURL": {
+      "description": "Firebase Database URL"
+    }
+  },
+  "addons": ["scheduler"]
+}

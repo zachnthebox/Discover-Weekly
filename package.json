@@ -1,0 +1,16 @@
+{
+  "name": "discovery-playlist",
+  "version": "0.0.1",
+  "description": "Backup spotify's discover weekly playlist every week",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^3.3.0",
+    "rsvp": "^3.2.1",
+    "spotify-web-api-node": "^2.3.5"
+  }
+}
